@@ -1,0 +1,17 @@
+{
+  "titulo": "Faxina-PC-13-11-A(1)",
+  "arquivo": "index.html",
+  "itens": [
+    {
+      "path": "app/index.html",
+      "nome": "Faxina PC",
+      "desc": "",
+      "on": true,
+      "icone": "app/icons/icon.svg"
+    }
+  ],
+  "sub": "",
+  "logo": "",
+  "tema": "dourado",
+  "links": []
+}

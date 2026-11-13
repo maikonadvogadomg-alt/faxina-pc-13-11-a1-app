@@ -1,0 +1,53 @@
+{
+  "name": "faxina-pc",
+  "version": "1.0.0",
+  "description": "Faxina PC — limpeza, backup e diagnóstico do computador, com relatório",
+  "author": "Maikon",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "programa": "electron .",
+    "exe": "electron-builder --win nsis portable --x64 --publish never"
+  },
+  "dependencies": {
+    "msedge-tts": ">=1.3.4"
+  },
+  "devDependencies": {
+    "electron": "33.2.1",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.maikon.faxina.pc.nteste11132138",
+    "productName": "Faxina PC (teste 11132138)",
+    "executableName": "Faxina-PC-nteste11132138",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "app/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "asar": false,
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "app/icons/icon-512.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Faxina PC (teste 11132138)",
+      "artifactName": "Faxina-PC-nteste11132138-Instalar.exe",
+      "include": "electron/instalar.nsh"
+    },
+    "portable": {
+      "artifactName": "Faxina-PC-nteste11132138-sem-instalar.exe"
+    }
+  },
+  "portaDoPrograma": 8475
+}

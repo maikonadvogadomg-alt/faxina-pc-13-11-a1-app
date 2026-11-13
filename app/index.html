@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Faxina PC</title>
+<link rel="stylesheet" href="css/app.css">
+  <!-- PWA:inicio (gerado pelo Mini SK — pode refazer no painel 📱 PWA) -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#b6bed3">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Faxina PC">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <script>
+    if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+      addEventListener('load', function () { navigator.serviceWorker.register('service-worker.js').catch(function (e) { console.warn('Service worker:', e); }); });
+    }
+  </script>
+  <!-- PWA:fim -->
+</head>
+<body>
+<header>
+  <div class="topo"><h1>🧹 Faxina PC</h1><span class="chip" id="versao">v13/11-A</span></div>
+  <div class="estado" id="estado">procurando o motor…</div>
+</header>
+<nav class="abas" id="abas">
+  <button class="aba on" data-t="inicio">🏠 Começar</button>
+  <button class="aba" data-t="diagnostico">🔎 Diagnóstico</button>
+  <button class="aba" data-t="limpar">🧹 Limpar</button>
+  <button class="aba" data-t="backup">💾 Backup</button>
+  <button class="aba" data-t="programas">📦 Programas</button>
+  <button class="aba" data-t="relatorio">📋 Relatório</button>
+</nav>
+<main>
+  <section data-p="inicio"><div id="pan-inicio"></div></section>
+  <section data-p="diagnostico" hidden><div id="pan-diagnostico"></div></section>
+  <section data-p="limpar" hidden><div id="pan-limpar"></div></section>
+  <section data-p="backup" hidden><div id="pan-backup"></div></section>
+  <section data-p="programas" hidden><div id="pan-programas"></div></section>
+  <section data-p="relatorio" hidden><div id="pan-relatorio"></div></section>
+</main>
+<div class="aviso" id="aviso" hidden></div>
+<script src="config.js" onerror="window.__semConfig=1"></script>
+<script src="js/00-base.js"></script>
+<script src="js/10-ponte.js"></script>
+<script src="js/20-diagnostico.js"></script>
+<script src="js/30-limpar.js"></script>
+<script src="js/40-backup.js"></script>
+<script src="js/50-programas.js"></script>
+<script src="js/60-relatorio.js"></script>
+<script src="js/99-app.js"></script>
+</body>
+</html>
