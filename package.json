@@ -17,9 +17,9 @@
     "electron-builder": "25.1.8"
   },
   "build": {
-    "appId": "com.maikon.faxina.pc.nteste11132138",
-    "productName": "Faxina PC (teste 11132138)",
-    "executableName": "Faxina-PC-nteste11132138",
+    "appId": "com.maikon.faxina.pc.nteste11132140",
+    "productName": "Faxina PC (teste 11132140)",
+    "executableName": "Faxina-PC-nteste11132140",
     "directories": {
       "output": "release"
     },
@@ -41,13 +41,13 @@
       "perMachine": false,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Faxina PC (teste 11132138)",
-      "artifactName": "Faxina-PC-nteste11132138-Instalar.exe",
+      "shortcutName": "Faxina PC (teste 11132140)",
+      "artifactName": "Faxina-PC-nteste11132140-Instalar.exe",
       "include": "electron/instalar.nsh"
     },
     "portable": {
-      "artifactName": "Faxina-PC-nteste11132138-sem-instalar.exe"
+      "artifactName": "Faxina-PC-nteste11132140-sem-instalar.exe"
     }
   },
-  "portaDoPrograma": 8475
+  "portaDoPrograma": 8544
 }
